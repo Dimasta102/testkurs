@@ -1,0 +1,370 @@
+/* Общие стили */
+.App {
+  display: flex; /* Используем flexbox для расположения элементов */
+  flex-direction: column; /* Устанавливаем вертикальное направление */
+  min-height: 100vh; /* Устанавливаем минимальную высоту на 100% высоты экрана */
+}
+
+main {
+  flex: 1; /* Позволяет основному контенту занимать оставшееся пространство */
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+  font-size: 16px;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+p {
+  font-size: 16px;
+}
+
+/* Заголовки */
+h1 {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  color: #2c3e50;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #e74c3c;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 15px 0;
+  color: #34495e;
+}
+
+/* Стили для Header */
+header {
+  position: relative;
+  background: linear-gradient(to right, #4a90e2, #007bff); /* Градиентный фон */
+  color: white;
+  padding: 50px 20px; /* Добавлен отступ сверху */
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  z-index: 1;
+}
+
+header .logo {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+header .logo span {
+  color: #f39c12; /* Выделение определенной части логотипа */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f39c12; /* Подсветка активного меню */
+}
+
+.header-btn {
+  background-color: #f39c12;
+  color: white;
+  font-size: 1.1rem;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 30px;
+  margin-top: 20px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.header-btn:hover {
+  background-color: #e67e22;
+}
+
+/* Приветственный блок */
+.welcome-section {
+  padding: 50px 20px;
+  background-color: #f7f7f7;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-text h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.welcome-text p {
+  font-size: 1.2rem;
+  color: #34495e;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.explore-btn {
+  display: inline-block;
+  background-color: #e74c3c;
+  color: white;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: #c0392b;
+}
+
+
+/* Позиционирование фона с изображением */
+header .header-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://example.com/car-rental-background.jpg') center/cover no-repeat;
+  z-index: -1;
+  opacity: 0.3; /* Затемнение изображения */
+}
+
+
+/* Стили для карточек автомобилей */
+.fleetText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+.car-list {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 40px;
+  padding: 20px;
+  align-items: center;
+  text-decoration: none;
+}
+
+.car-card {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 85%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0 0 0;
+  text-decoration: none;
+}
+
+.car-card img {
+  width: 79%;
+  height: 80%;
+  object-fit: cover;
+}
+
+.car-card h3 {
+  margin: 10px 0;
+  color: #34495e;
+  text-align: center;
+  text-decoration: none;
+}
+
+.car-card p {
+  font-size: 1.2rem;
+  color: #e74c3c;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.car-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Слайдер */
+.slider {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.slider img {
+  width: 50%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.slider button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slider button:first-of-type {
+  left: 15vw;
+}
+
+.slider button:last-of-type {
+  right: 15vw;
+}
+
+/* Стили для Footer */
+footer {
+  background-color: #34495e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: -webkit-fill-available;
+  font-size: 1rem;
+}
+
+/* Формы */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  resize: vertical;
+  transition: border 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #e74c3c;
+}
+
+button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #c0392b;
+}
+
+/* Стили для отзывов */
+.reviews-list {
+  margin: 20px 0;
+}
+
+.reviews-list li {
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.reviews-list li span {
+  font-size: 14px;
+  color: #777;
+}
+
+.reviews-list li p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Режим для слабовидящих (изменение шрифта и цветовых схем) */
+body.accessibility {
+  font-size: 18px;
+}
+
+body.accessibility.dark-theme {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+}
+
+body.accessibility.light-theme {
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* Анимации для кнопок и переходов */
+button,
+input[type="button"] {
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2c3e50;
+}
+
+input[type="button"]:hover {
+  background-color: #2c3e50;
+}
+
